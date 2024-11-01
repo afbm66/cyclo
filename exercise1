@@ -1,0 +1,27 @@
+def categorize_scores(scores):
+    """Categoriza las puntuaciones de acuerdo a varios rangos y criterios."""
+    
+    high_scores = []
+    low_scores = []
+    
+    for score in scores:  # 1 rama por el bucle
+        if score < 50:  # 1
+            if score < 20:  # 1
+                low_scores.append("Very Low")
+            elif score < 30:  # 1
+                low_scores.append("Low")
+            elif score < 40:  # 1
+                low_scores.append("Below Average")
+            else:
+                low_scores.append("Average")  # 1
+        elif 50 <= score <= 80:  # 1
+            if score < 60:  # 1
+                high_scores.append("Above Average")
+            elif score < 70:  # 1
+                high_scores.append("Good")
+            else:
+                high_scores.append("Very Good")  # 1
+        else:
+            high_scores.append("Excellent")  # 1
+
+    return high_scores, low_scores
